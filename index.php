@@ -1,3 +1,6 @@
+<?php
+include_once('/resources/libraru/parsly.php'); 
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -13,7 +16,8 @@
     <div class="absolute-center text-center inline-block">
         <img class="text-center hide" id="logo" src="img/logo_green.png" />
         <div class="hide" id="signup">
-            <a class="button success" href="panel.html">Sign up</a>
+            <a class="button success" href="<?php
+		connect()?>">Sign up</a>
         </div>
     </div>
 
