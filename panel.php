@@ -21,8 +21,7 @@
                 <li class="has-dropdown">
                     <a href="#">Options</a>
                     <ul class="dropdown">
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="index.php">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -37,10 +36,10 @@
 <div class="row">
     <div class="columns large-2">
         <ul class="side-nav">
-            <li class="active"><a href="panel.html">Control Panel</a></li>
-            <li><a href="scheduler.html">Event Scheduler</a></li>
-            <li><a href="unsubscriber.html">Easy Unsubscriber</a></li>
-            <li><a href="recent.html">Recent Commands</a></li>
+            <li class="active"><a href="panel.php">Control Panel</a></li>
+            <li><a href="scheduler.php">Event Scheduler</a></li>
+            <li><a href="unsubscriber.php">Easy Unsubscriber</a></li>
+            <li><a href="recent.php">Recent Commands</a></li>
         </ul>
     </div>
     <div class="columns large-10">

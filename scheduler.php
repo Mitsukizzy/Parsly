@@ -21,8 +21,7 @@
                 <li class="has-dropdown">
                     <a href="#">Options</a>
                     <ul class="dropdown">
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="index.php">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -37,25 +36,32 @@
 <div class="row">
     <div class="columns large-2">
         <ul class="side-nav">
-            <li><a href="panel.html">Control Panel</a></li>
-            <li><a href="scheduler.html">Event Scheduler</a></li>
-            <li class="active"><a href="unsubscriber.html">Easy Unsubscriber</a></li>
-            <li><a href="recent.html">Recent Commands</a></li>
+            <li><a href="panel.php">Control Panel</a></li>
+            <li class="active"><a href="scheduler.php">Event Scheduler</a></li>
+            <li><a href="unsubscriber.php">Easy Unsubscriber</a></li>
+            <li><a href="recent.php">Recent Commands</a></li>
         </ul>
     </div>
     <div class="columns large-10">
         <div class="main-content">
-            <h1>Easy Unsubscriber</h1>
-            <h4>We gather the unsubscribe links of frequent senders so you don't have to search for them.</h4>
+            <h1>Event Scheduler</h1>
+            <h4>A list of events we suggest based on your inbox mail</h4>
             <hr />
-            <div class="unsub-row">
-                <a href="#" class="inline-block right button round alert">Unsubscribe</a>
-                <a href="" class="inline-block website">WebsiteName.com</a>
+            <div class="category">
+                <h3>Free Food</h3>
+                <div class="row">
+                    <div class="columns columns-special large-12">
+                        <p>Time/Date - Location - Event - Subject of original email</p>
+                    </div>
+                </div>
             </div>
-            <br />
-            <div class="unsub-row">
-                <a href="#" class="inline-block right button round alert">Unsubscribe</a>
-                <a href="" class="inline-block website">WebsiteName.com</a>
+            <div class="category">
+                <h3>Internship Talks</h3>
+                <div class="row">
+                    <div class="columns columns-special large-12">
+                        <p>Time/Date - Location - Event - Subject of original email</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
