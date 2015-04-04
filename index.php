@@ -13,7 +13,7 @@
     <div class="absolute-center text-center inline-block">
         <img class="text-center hide" id="logo" src="img/logo_green.png" />
         <div class="hide" id="signup">
-            <a class="button success" href="index.html">Sign up</a>
+            <a class="button success" href="panel.html">Sign up</a>
         </div>
     </div>
 
