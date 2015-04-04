@@ -1,5 +1,6 @@
-.top-bar, .contain-to-grid, .top-bar-section ul li {
-    background: #3a9538; /* Parsley green */
+.top-bar, .contain-to-grid, .top-bar-section ul li,
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #B76EB8; /* Parsley green 3a9538 */
 }
 
 .left-off-canvas-menu{
@@ -29,13 +30,19 @@ span{
     color: #fff !important;
 }
 
+.logged-in{
+    margin: 10px 25px 10px 5px;
+}
+
 .side-nav{
     background: #cfd9ce;
-    height: 100%;
+    margin-bottom: -3000px;
+    padding-bottom: 3000px;
+    overflow:hidden;
 }
 
 .main-content{
-    padding: 5px 10px 0 20px;
+    margin: 5px 0 0 20px;
 }
 
 .columns{
