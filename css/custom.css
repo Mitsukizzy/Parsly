@@ -1,0 +1,43 @@
+.top-bar, .contain-to-grid, .top-bar-section ul li {
+    background: #3a9538; /* Parsley green */
+}
+
+.left-off-canvas-menu{
+    background: #cfd9ce;
+    color: #333333;
+}
+
+.logo{
+    font-size: 2em !important;
+}
+
+.side-nav li a:not(.button) {
+    color: #333333;
+}
+.side-nav li a:not(.button):hover {
+    color: #000;
+}
+.contain-to-grid .top-bar, .row{
+    max-width: 120rem;
+}
+
+span{
+    color: #6bc7e5;
+}
+
+.white{
+    color: #fff !important;
+}
+
+.side-nav{
+    background: #cfd9ce;
+    height: 100%;
+}
+
+.main-content{
+    padding: 5px 10px 0 20px;
+}
+
+.columns{
+    padding: 0;
+}
