@@ -9,7 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr.js"></script>
 </head>
-<body>
+<body id="body" class="hide">
 
 <div class="contain-to-grid sticky">
     <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
@@ -79,6 +79,9 @@
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
 <script>
+    $(document).ready(function() {
+        $('#body').fadeIn(2000);
+    });
     $(document).foundation();
 </script>
 </body>

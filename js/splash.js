@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $('#logo').fadeIn(3000, function(){
+    $('#logo').fadeIn(2500, function(){
         $('#signup').slideDown(1500);
     });
 });
