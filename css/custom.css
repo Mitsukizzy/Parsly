@@ -1,6 +1,10 @@
 .top-bar, .contain-to-grid, .top-bar-section ul li,
 .top-bar-section li:not(.has-form) a:not(.button) {
-    background: #B76EB8; /* Parsley green 3a9538 */
+    background: #3a9538; /* Parsley green 3a9538 */
+}
+
+body{
+    overflow:hidden;
 }
 
 .left-off-canvas-menu{
@@ -13,9 +17,11 @@
 }
 
 .side-nav li a:not(.button) {
+    font-size: 1.3em;
     color: #333333;
 }
-.side-nav li a:not(.button):hover {
+.side-nav li a:not(.button):hover,
+.side-nav li a:not(.button):active{
     color: #000;
 }
 .contain-to-grid .top-bar, .row{
@@ -34,11 +40,15 @@ span{
     margin: 10px 25px 10px 5px;
 }
 
+.logo{
+    height: 45px;
+    width: auto;
+}
+
 .side-nav{
     background: #cfd9ce;
     margin-bottom: -3000px;
     padding-bottom: 3000px;
-    overflow:hidden;
 }
 
 .main-content{
