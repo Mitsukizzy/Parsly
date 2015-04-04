@@ -3,6 +3,6 @@
 ####Domain: Parsly.rocks
 
 Team Members:
-*Garland Chen
-*Steven Truong 
-*Izzy Benavente
+* Garland Chen
+* Steven Truong 
+* Izzy Benavente
