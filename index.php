@@ -12,6 +12,7 @@ include_once('resources/library/parsly.php');
     <link rel="stylesheet" href="css/foundation.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
