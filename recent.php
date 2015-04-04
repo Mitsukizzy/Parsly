@@ -9,6 +9,7 @@ session_start();
     <title>Parsly | Welcome</title>
     <link rel="stylesheet" href="css/foundation.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr.js"></script>
 </head>
