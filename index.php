@@ -1,5 +1,7 @@
 <?php
-include_once('/resources/libraru/parsly.php'); 
+error_reporting(E_ALL);
+ini_set('display_errors','1'); 
+include_once('resources/library/parsly.php'); 
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -16,8 +18,11 @@ include_once('/resources/libraru/parsly.php');
     <div class="absolute-center text-center inline-block">
         <img class="text-center hide" id="logo" src="img/logo_green.png" />
         <div class="hide" id="signup">
-            <a class="button success" href="<?php
-		connect()?>">Sign up</a>
+            <a class="button success" href="
+		<?php
+		echo connect();
+		?>
+		">Sign up</a>
         </div>
     </div>
 
