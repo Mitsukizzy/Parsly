@@ -6,6 +6,10 @@
 body{
     overflow:hidden;
 }
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
 
 .left-off-canvas-menu{
     background: #cfd9ce;
@@ -24,6 +28,12 @@ body{
 .side-nav li a:not(.button):active{
     color: #000;
 }
+
+.side-nav .active{
+    background: #fff;
+    color: #6bc7e5;
+}
+
 .contain-to-grid .top-bar, .row{
     max-width: 120rem;
 }
@@ -32,12 +42,26 @@ span{
     color: #6bc7e5;
 }
 
+.alert{
+    padding: 8px;
+    margin-right: 5%;
+}
+
+.website{
+    line-height: 34px;
+    font-size: 1.4em;
+}
+
 .white{
     color: #fff !important;
 }
 
 .logged-in{
     margin: 10px 25px 10px 5px;
+}
+
+.title-area{
+    margin-left: 20px;
 }
 
 .logo{
@@ -52,9 +76,18 @@ span{
 }
 
 .main-content{
-    margin: 5px 0 0 20px;
+    margin: 15px 0 0 30px;
 }
 
+.columns-special{
+    padding: 5px 25px !important;
+}
+.unsub-row{
+    padding-right: 40%;
+}
+.inline-block{
+    display: inline-block;
+}
 .columns{
     padding: 0;
 }
