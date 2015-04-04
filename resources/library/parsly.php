@@ -1,12 +1,16 @@
 <?php
 include_once("class.contextio.php");
 
+
+//This function should clear out all tokens and accounts associated with our keys. 
 function flushTokens()
 {
 	$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
 	$listAccountTokensResponse = $contextIO->listConnectTokens(); 
 	var_dump($listAccountTokensResponse); 
 }
+
+//This makes the URL for connecting and doing OAuth
 function connect()
 {
 	$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');

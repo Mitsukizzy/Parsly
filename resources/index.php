@@ -6,6 +6,8 @@ include_once("resources/library/parsly.php");
 $contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv'); 
 flushTokens(); 
 
+
+//This just prints out the 5 most recent emails from every folder in a user's email account.
 /*if(!empty($_SESSION['token']))
 {
 	$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv'); 
