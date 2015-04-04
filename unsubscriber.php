@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -16,7 +19,9 @@
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-                <li><p class="white logged-in">Currently logged in as <span>ibenaven@usc.edu</span></p></li>
+               	                <li><p class="white logged-in">Currently logged in as <span><?php
+                echo $_SESSION['email'];
+                ?></span></p></li>
                 <li></li>
                 <li class="has-dropdown">
                     <a href="#">Options</a>
