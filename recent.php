@@ -42,10 +42,10 @@ session_start();
 <div class="row">
     <div class="columns large-2">
         <ul class="side-nav">
-            <li><a href="panel.php">Control Panel</a></li>
+            <!--<li><a href="panel.php">Control Panel</a></li>-->
             <li><a href="scheduler.php">Event Scheduler</a></li>
             <li><a href="unsubscriber.php">Easy Unsubscriber</a></li>
-            <li class="active"><a href="recent.php">Recent Commands</a></li>
+            <!--<li class="active"><a href="recent.php">Recent Commands</a></li>-->
         </ul>
     </div>
     <div class="columns large-10">
