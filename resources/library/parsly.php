@@ -22,7 +22,7 @@
 	function connect()
 	{
 		$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
-		$addTokenResponse = $contextIO->addConnectToken(array('callback_url' => 'http://parsly.rocks/panel.php'));
+		$addTokenResponse = $contextIO->addConnectToken(array('callback_url' => 'http://parsly.rocks/scheduler.php'));
 		//get the redirect url from the response, and direct the user to it
 		$redirectUrl = $addTokenResponse->getDataProperty('browser_redirect_url');
 	//	$userListResponse = $contextIO->listusers()->getData();

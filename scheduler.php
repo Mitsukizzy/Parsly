@@ -1,5 +1,13 @@
 <?php
 session_start();
+error_reporting(E_ALL);
+ini_set( 'display_errors','1');
+require_once('resources/library/parsly.php');
+
+if( !isset( $_SESSION['id']) || !isset($_SESSION['email']))
+{
+        setAccount();
+}
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -56,8 +64,8 @@ session_start();
             <hr />
             </div>
 	<div class = "category">
-		<h3><a href = ''>Southwest Airlines Flight (8RQNN2) </a><h3>
-		<p> Tuesday, April 7th , 2015 at 8:00pm LAX Los Angeles, California</p>
+		<h3><a href = 'https://www.southwest.com/flight/view-air-reservation.html?confirmationNumber=858NNT&confirmationNumberLastName=TRUONG&confirmationNumberFirstName=STEVEN%20NHAN&RMID=PROD_Purchase_V6&RRID=U1RFVkVOVFJAVVNDLkVEVQ..&src=MAILTXNCONF0EMAIL110715'>Southwest Airlines Flight (8RQNN2) </a><h3>
+		<p> Tuesday, April 10th , 2015 at 8:25pm LAX Los Angeles, California</p>
 	</div>
 	        <?php
                 include_once('resources/library/class.contextio.php');

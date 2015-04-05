@@ -57,6 +57,10 @@ ini_set( 'display_errors','1');
 	   <h1>Easy Unsubscriber</h1>
             <h4>We gather the unsubscribe links of frequent senders so you don't have to search for them.</h4>
             <hr />
+	    <div  class = 'unsub-row'>
+	    	<a href = "Numberonejobsite.com" class ='large-8 inline-block website' >Number One Job Site </a> 
+		<a href = "http://alerts.numberonejobsite.com/wf/unsubscribe?upn=mSmPH8rKtKnNviZeKAYpz2cvoyQ1vP1-2BR1YyT3D0xlbTuPFPPDbq91-2Bh4LhjLizkpnRW2qdM8RSmAC-2BlHHAivibCb5Afp8nWucTC-2FfYnHdKzjtzivjPM6JckeFbXxiBW1uB8vLcqXzOQa8wCHMc5j4i4nQtMoWI975tOIbJnU3xiecZ0SfMEPKrhjbxcb5yVS1Nw3K1p97EwhNaW27-2Ff5S9dBt8nx5EepVOo9w6-2BMxXW-2FIHK5v9mfEGWjPmtB2eP"  class='large-2 inline-block button round alert'>Unsubscribe</a>
+		</div>
             <?php
 	    	//echo $_SESSION['id']; 
 		include_once('resources/library/class.contextio.php'); 
@@ -65,7 +69,10 @@ ini_set( 'display_errors','1');
 		$messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '10', 'include_body' => '1')); 
 		//var_dump($messageListResponse);
 	
+		
 		$messages = $messageListResponse->getData();
+		
+
 		foreach($messages as $message)
 		{
 			if(containsUnsubscribe($message['bodies'][0]['content']))
