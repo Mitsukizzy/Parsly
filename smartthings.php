@@ -1,8 +1,8 @@
 <?php
 
 //client id and client secret
-$client = 'd3f6f952-5f78-462d-9fa1-f9f8fbaf3c33';
-$secret = '9fbfbc61-07c5-4766-a050-4cbd490cc7b8';
+$client = 'e21868ad-f068-44d6-b614-09296f9e859c';
+$secret = 'abc609ee-6d7f-4aad-b010-84a69ab7f37f';
 
 //hardcode the full url to redirect to this file
 $url = "https://graph.api.smartthings.com/api/smartapps/installations/09ba9832-2a8c-4852-a500-8f70bde35af5";

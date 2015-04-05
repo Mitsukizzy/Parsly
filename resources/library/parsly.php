@@ -38,7 +38,25 @@
 		$latest = count($userListResponse);
 		 $_SESSION['email'] = $userListResponse[$latest-1]['email_addresses'][0];
 		 $_SESSION['id'] = $userListResponse[$latest-1]['id'];
-		echo "SUCCESS";
+	}
+	//Assume unsubscribe link is the last link in the document
+	function getUnsubscribeLink($input)
+	{
+		//print_r($html); 
+		$input = substr($input, strripos($input,"http"));
+		$input = substr($input, 0, stripos($input," ")); 
+		print_r($input); 
+		return $input; 
+		//print_r($input); 
+		//print htmlentities($html); 
+		//$doc->loadHTMLFile($html); 
+		/*foreach($doc->getElementsByTagName('a') as $link)
+		{
+			if(stristr($link->textContent,'unsubscribe'))
+			{
+				return $link->getAttribute('href'); 
+			}
+		}*/
 	}
 	//Gets 50 emails once you log in!	
 	function getEmails($emailID)
@@ -51,5 +69,24 @@
 		array_push($response,array($message['subject'],$message['message_id'])); 
 	}  
 	return $response; 
+	}
+	function containsUnsubscribe($input)
+	{
+		return stripos(strtolower($input),'unsubscribe'); 
+	}
+       function containsEventbrite($input)
+        {
+                return stripos(strtolower($input),'eventbrite');
+        }
+	function getFirstLink($input)
+	{
+		return substr($input,stripos($input,'http'),stripos($input,'http')-stripos($input,'.com'));
+	}
+	function formattedInfo($input)
+	{
+		$input = substr($input, strripos($input,"About this event")); 
+		$input = substr($input, 17, stripos($input,"-")); 
+		$input = trim($input, "- ");
+		return "<p>$input</p>";
 	}
 ?>

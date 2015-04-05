@@ -57,29 +57,32 @@ ini_set( 'display_errors','1');
 	   <h1>Easy Unsubscriber</h1>
             <h4>We gather the unsubscribe links of frequent senders so you don't have to search for them.</h4>
             <hr />
-            <div class="unsub-row">
-                <a href="#" class="inline-block right button round alert">Unsubscribe</a>
-                <a href="" class="inline-block website">WebsiteName.com</a>
-            </div>
-            <br />
-            <div class="unsub-row">
-                <a href="#" class="inline-block right button round alert">Unsubscribe</a>
-                <a href="" class="inline-block website">WebsiteName.com</a>
-            </div>
             <?php
-	    	echo $_SESSION['id']; 
+	    	//echo $_SESSION['id']; 
 		include_once('resources/library/class.contextio.php'); 
+		include_once('resources/library/parsly.php'); 
 		$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
-		$messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '100')); 
+		$messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '100', 'include_body' => '1')); 
 		//var_dump($messageListResponse);
-		
+	
 		$messages = $messageListResponse->getData();
 		foreach($messages as $message)
 		{
-			echo "<div class = 'unsub-row'>";
-				echo "<a href ='' class =' inline-block website'>".$message['addresses']['from'][0]['name']."</a>"; 
-				echo "<a href='#' class='inline-block right button round alert'>Unsubscribe</a>";
-			echo "</div>"; 
+			if(containsUnsubscribe($message['bodies'][0]['content']))
+			{
+				if(empty($message['addresses']['from'][0]['name']))
+				{
+				$name = $message['addresses']['from'][0]['email'];
+				}
+				else
+				{
+				$name = $message['addresses']['from'][0]['name']; 
+				}
+				echo "<div class = 'unsub-row'>";
+				echo "<a href ='' class ='large-8 inline-block website'>".$name."</a>"; 
+				echo "<a href='".getUnsubscribeLink($message['bodies'][0]['content'])."' class='large-2 inline-block button round alert'>Unsubscribe</a>";
+				echo "</div>";
+			}
 		}
 	    ?>
 	</div>

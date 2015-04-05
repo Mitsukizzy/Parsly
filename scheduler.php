@@ -54,22 +54,27 @@ session_start();
             <h1>Event Scheduler</h1>
             <h4>A list of events we suggest based on your inbox mail</h4>
             <hr />
-            <div class="category">
-                <h3>Free Food</h3>
-                <div class="row">
-                    <div class="columns columns-special large-12">
-                        <p>Time/Date - Location - Event - Subject of original email</p>
-                    </div>
-                </div>
             </div>
-            <div class="category">
-                <h3>Internship Talks</h3>
-                <div class="row">
-                    <div class="columns columns-special large-12">
-                        <p>Time/Date - Location - Event - Subject of original email</p>
-                    </div>
-                </div>
-            </div>
+	        <?php
+                include_once('resources/library/class.contextio.php');
+                include_once('resources/library/parsly.php');
+                $contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
+                $messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '50', 'include_body' => '1'));
+                $messages = $messageListResponse->getData();
+                foreach($messages as $message)
+                {
+                        if(containsEventbrite($message['addresses']['from'][0]['email']))
+                        {
+                                echo "<div class = 'category'>";
+                                echo "<h3><a href ='".getFirstLink($message['bodies'][0]['content'])."'>".$message['subject']."</a></h3>"; 
+                                echo "<div class='columns columns-special large-12'>";
+                        	echo formattedInfo($message['bodies'][0]['content']);
+                    		echo "</div>";
+                   		echo "</div>";
+				
+                        }
+                }
+            ?>
         </div>
     </div>
 </div>
