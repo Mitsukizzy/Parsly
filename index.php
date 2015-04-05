@@ -1,6 +1,6 @@
 <?php
-session_unset(); 
-session_start(); 
+session_start();
+session_unset();  
 error_reporting(E_ALL);
 ini_set('display_errors','1'); 
 include_once('resources/library/parsly.php'); 

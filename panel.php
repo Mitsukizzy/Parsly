@@ -1,5 +1,14 @@
 <?php
 session_start();
+error_reporting(E_ALL); 
+ini_set( 'display_errors','1');
+require_once('resources/library/parsly.php');
+
+if( !isset( $_SESSION['id']) || !isset($_SESSION['email']))
+{
+	setAccount(); 
+}
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -20,9 +29,11 @@ session_start();
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-                <li><p class="white logged-in">Currently logged in as <span><?php
+                <li><p class="white logged-in">Currently logged in as <span>
+		<?php
 		echo $_SESSION['email']; 
-		?></span></p></li>
+		?>
+		</span></p></li>
                 <li></li>
                 <li class="has-dropdown">
                     <a href="#">Options</a>

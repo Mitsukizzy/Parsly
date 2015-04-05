@@ -25,11 +25,20 @@
 		$addTokenResponse = $contextIO->addConnectToken(array('callback_url' => 'http://parsly.rocks/panel.php'));
 		//get the redirect url from the response, and direct the user to it
 		$redirectUrl = $addTokenResponse->getDataProperty('browser_redirect_url');
-		$userListResponse = $contextIO->listusers()->getData();
-		$latest = count($userListResponse); 
-		$_SESSION['email'] = $userListResponse[$latest]['email_addresses'][0]; 
-		$_SESSION['id'] = $userListResponse[$latest]['id'];
+	//	$userListResponse = $contextIO->listusers()->getData();
+	//	$latest = count($userListResponse); 
+	//	$_SESSION['email'] = $userListResponse[$latest-1]['email_addresses'][0]; 
+	//	$_SESSION['id'] = $userListResponse[$latest-1]['id'];
 		return $redirectUrl; 
+	}
+	function setAccount()
+	{
+		$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
+		$userListResponse = $contextIO->listusers()->getData();
+		$latest = count($userListResponse);
+		 $_SESSION['email'] = $userListResponse[$latest-1]['email_addresses'][0];
+		 $_SESSION['id'] = $userListResponse[$latest-1]['id'];
+		echo "SUCCESS";
 	}
 	//Gets 50 emails once you log in!	
 	function getEmails($emailID)
