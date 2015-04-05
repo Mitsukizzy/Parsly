@@ -55,11 +55,15 @@ session_start();
             <h4>A list of events we suggest based on your inbox mail</h4>
             <hr />
             </div>
+	<div class = "category">
+		<h3><a href = ''>Southwest Airlines Flight (8RQNN2) </a><h3>
+		<p> Tuesday, April 7th , 2015 at 8:00pm LAX Los Angeles, California</p>
+	</div>
 	        <?php
                 include_once('resources/library/class.contextio.php');
                 include_once('resources/library/parsly.php');
                 $contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
-                $messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '50', 'include_body' => '1'));
+                $messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '15', 'include_body' => '1'));
                 $messages = $messageListResponse->getData();
                 foreach($messages as $message)
                 {
@@ -74,8 +78,7 @@ session_start();
 				
                         }
                 }
-            ?>
-        </div>
+            ?>      </div>
     </div>
 </div>
 
@@ -86,4 +89,5 @@ session_start();
     $(document).foundation();
 </script>
 </body>
+
 </html>

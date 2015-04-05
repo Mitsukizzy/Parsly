@@ -62,7 +62,7 @@ ini_set( 'display_errors','1');
 		include_once('resources/library/class.contextio.php'); 
 		include_once('resources/library/parsly.php'); 
 		$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
-		$messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '100', 'include_body' => '1')); 
+		$messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '10', 'include_body' => '1')); 
 		//var_dump($messageListResponse);
 	
 		$messages = $messageListResponse->getData();

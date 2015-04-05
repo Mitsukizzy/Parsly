@@ -6,8 +6,9 @@ error_reporting(E_ALL);
 session_start();  
 ini_set('display_errors','1');
 
+flushTokens();
 
-var_dump($_SESSION); 
+//var_dump($_SESSION); 
 
 
 ?>

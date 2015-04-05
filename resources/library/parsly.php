@@ -45,7 +45,7 @@
 		//print_r($html); 
 		$input = substr($input, strripos($input,"http"));
 		$input = substr($input, 0, stripos($input," ")); 
-		print_r($input); 
+		//print_r($input); 
 		return $input; 
 		//print_r($input); 
 		//print htmlentities($html); 
