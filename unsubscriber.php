@@ -1,5 +1,9 @@
 <?php
 session_start();
+include_once('resources/libaries/class.contextio.php'); 
+error_reporting(E_ALL); 
+ini_set( 'display_errors','1');
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -50,7 +54,7 @@ session_start();
     </div>
     <div class="columns large-10">
         <div class="main-content">
-            <h1>Easy Unsubscriber</h1>
+	   <h1>Easy Unsubscriber</h1>
             <h4>We gather the unsubscribe links of frequent senders so you don't have to search for them.</h4>
             <hr />
             <div class="unsub-row">
@@ -62,7 +66,23 @@ session_start();
                 <a href="#" class="inline-block right button round alert">Unsubscribe</a>
                 <a href="" class="inline-block website">WebsiteName.com</a>
             </div>
-        </div>
+            <?php
+	    	echo $_SESSION['id']; 
+		include_once('resources/library/class.contextio.php'); 
+		$contextIO = new ContextIO('qd8cq03s','SogN0NW6RPJPkStv');
+		$messageListResponse = $contextIO->listMessages($_SESSION['id'], array('label' => 0, 'folder' => 'Inbox', 'limit' => '100')); 
+		//var_dump($messageListResponse);
+		
+		$messages = $messageListResponse->getData();
+		foreach($messages as $message)
+		{
+			echo "<div class = 'unsub-row'>";
+				echo "<a href ='' class =' inline-block website'>".$message['addresses']['from'][0]['name']."</a>"; 
+				echo "<a href='#' class='inline-block right button round alert'>Unsubscribe</a>";
+			echo "</div>"; 
+		}
+	    ?>
+	</div>
     </div>
 </div>
 
