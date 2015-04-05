@@ -8,8 +8,15 @@ if len(sys.argv) > 1:
   session.ehlo()
   session.starttls()
   session.login('garlnd106@gmail.com', "#yoloswag")
+  headers = "\r\n".join(["from: " + GMAIL_USERNAME,
+                       "subject: " + email_subject,
+                       "to: " + recipient,
+                       "mime-version: 1.0",
+                       "content-type: text/html"])
 
   # body_of_email can be plaintext or html!                    
-  session.sendmail("garlnd106@gmail.com", "4017827413@tmomail.net", content)
+  headers = "\r\n\r\n" + content
+  # body_of_email can be plaintext or html!                    
+  session.sendmail("garlnd106@gmail.com", "4017827413@tmomail.net", headers)
 else:
   print('no message to send')

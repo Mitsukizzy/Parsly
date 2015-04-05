@@ -60,7 +60,11 @@ ini_set( 'display_errors','1');
 	    <div  class = 'unsub-row'>
 	    	<a href = "Numberonejobsite.com" class ='large-8 inline-block website' >Number One Job Site </a> 
 		<a href = "http://alerts.numberonejobsite.com/wf/unsubscribe?upn=mSmPH8rKtKnNviZeKAYpz2cvoyQ1vP1-2BR1YyT3D0xlbTuPFPPDbq91-2Bh4LhjLizkpnRW2qdM8RSmAC-2BlHHAivibCb5Afp8nWucTC-2FfYnHdKzjtzivjPM6JckeFbXxiBW1uB8vLcqXzOQa8wCHMc5j4i4nQtMoWI975tOIbJnU3xiecZ0SfMEPKrhjbxcb5yVS1Nw3K1p97EwhNaW27-2Ff5S9dBt8nx5EepVOo9w6-2BMxXW-2FIHK5v9mfEGWjPmtB2eP"  class='large-2 inline-block button round alert'>Unsubscribe</a>
-		</div>
+		</div> http://cinema.usc.edu/unsubscribe/
+	<div  class = 'unsub-row'>
+                <a href = "http://cinema.usc.edu" class ='large-8 inline-block website' >USC Cinematic Arts </a>
+                <a href = "http://cinema.usc.edu/unsubscribe/"  class='large-2 inline-block button round alert'>Unsubscribe</a>   
+            </div> 
             <?php
 	    	//echo $_SESSION['id']; 
 		include_once('resources/library/class.contextio.php'); 
